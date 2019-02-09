@@ -32,14 +32,14 @@ describe('AngularSystemJSComponent', () => {
   it('should have greeting Hello Angular', () => {
     const fixture = TestBed.createComponent(AngularWebpackComponent);
     const component = fixture.componentInstance;
-    expect(component.greeting()).toEqual("Hello, Angular");
+    expect(component.greeting()).toEqual('Hello, Angular');
   });
 
   it('should have greeting rendered in an h1', () => {
     const fixture = TestBed.createComponent(AngularWebpackComponent);
     fixture.detectChanges();
     const element = fixture.debugElement.query(By.css('h1')).nativeElement;
-    expect(element.textContent).toContain("Hello, Angular");
+    expect(element.textContent).toContain('Hello, Angular');
   });
 
   it('should set item list in dropdown options', () => {

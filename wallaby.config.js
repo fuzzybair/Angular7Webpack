@@ -19,9 +19,6 @@ module.exports = function (wallaby) {
         {test: /\.html$/, loader: 'raw-loader'},
         {test: /\.ts$/, loader: '@ngtools/webpack', include: /node_modules/, query: {tsConfigPath: 'tsconfig.json'}},
         {test: /\.js$/, loader: 'angular2-template-loader', exclude: /node_modules/},
-        {test: /\.styl$/, loaders: ['raw-loader', 'stylus-loader']},
-        {test: /\.less$/, loaders: ['raw-loader', {loader: 'less-loader'}]},
-        {test: /\.scss$|\.sass$/, loaders: ['raw-loader', 'sass-loader']},
         {test: /\.(jpg|png|svg)$/, loader: 'raw-loader'}
       ]
     },
@@ -44,7 +41,7 @@ module.exports = function (wallaby) {
 
   return {
     files: [
-      {pattern: 'src/**/*.+(ts|css|less|scss|sass|styl|html|json|svg)', load: false},
+      {pattern: 'src/**/*.+(ts|css||html)', load: false},
       {pattern: 'src/**/*.d.ts', ignore: true},
       {pattern: 'src/**/*.spec.ts', ignore: true}
     ],
